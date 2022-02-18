@@ -1,0 +1,43 @@
+Vantagens - Organização do Código
+- manutenção do código
+- facil entendimento
+
+Software de qualidade
+- mais de utilizar para ambos(usuario e cliente)
+- sem gambiarras
+- funcionamento correto 
+- fácil manutenção 
+- manter integridade dos dados(como : controlando o acesso de quem usa a aplicação, validações no back)
+
+Paradgima de Programação 
+- classificação das linguagens 
+- tipos:
+    - paradigma declarativo(sql) : funcional, lógica(prolog), Data-Driven(SQL)
+    - paradigma imperativo(fala pro pc extamente o que deve fazer) : POO(simula), procedural(cobol)
+    - multiparadigma : paradgimas diferentes podem ser aplicados na mesma linguagem, exemplos, php, java, c++, python
+
+POO 
+- origem : final da dec de 60
+- objetos podem ser abstrato ou real 
+- busca representar objetos do mundo real, no qual os atributos são as caracteristicas e os métodos as ações/comportamentos do objeto.
+
+UML
+- são diagramas
+- objetivo: fornece uma maneira padrão de visializar o projeto sem a necessidade de ter o entendimento da liguagem. ("planta da casa"), incluindo elementos como: atividades, como o sistema funcionará, interface de usúario, como as entidades interagem
+- a raiz da UML é POO
+- uso incorreto : utiliza-lo para fazer o código inteiro
+- diagramas :
+    - estruturais(estáticos) : diagrama de classe 
+    - comportamentais(dinâmicos) : 
+
+
+
+
+
+
+
+
+
+
+
+
