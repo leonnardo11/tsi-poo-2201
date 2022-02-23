@@ -1,0 +1,34 @@
+Diagrama de Componentes
+- elementos: componentes, interface, associação
+
+Diagrama de Estrutura Composta
+- ajudar a saber qual algoritmo está por tras 
+
+Diagrama de implantação
+- o que precisa para implantar nossas aplicação 
+
+Diagrama de objeto
+- mostra os valores dos atributos
+- classe depois de ser instanciada
+
+Diagrama de pacotes
+- mostra as dependências
+
+Diagrama de Perfil
+- é um metamodelo = modelo que descreve alguma coisa 
+
+
+
+comportamentais/diagrama
+Diagrama de atividades
+- fluxograma
+- acontecimento em pararalelo(barra em bold)
+
+Diagrama de Sequência 
+- elementos: fronteira, controle(regra de neg), entidade(trabalha com a camada de dados )
+- quanto mais pra baixo, acontecimento posterior
+
+Diagrama de caso de uso 
+- representa diversas interações de um usuario com o sistema
+
+Diagrama de Comunicação
