@@ -32,3 +32,19 @@ Diagrama de caso de uso
 - representa diversas interações de um usuario com o sistema
 
 Diagrama de Comunicação
+
+- dinam 
+
+Diagrama de visão geral da interação
+
+Semelhante ao diagrama de atividades 
+mas pode pegar elementos de outros diagramas para exemplificar
+
+Diagrama de Estado 
+
+- Mais voltado para o hardware
+- Mostra o Estado da Maquina(Idle, Active, Out of Service)
+
+Diagrama de Tempo:
+
+Detalha o comportamento do objetos durante um determinado periodo de tempo 
