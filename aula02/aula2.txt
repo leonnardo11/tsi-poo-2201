@@ -1,0 +1,40 @@
+Vantagens de organização
+- Manunteção 
+- Facil entendimento
+
+Caracteristicas de um Software de Qualidade:
+
+- Poucas ou nenhuma gambiarra para uma manunteção mais facil 
+- Uma boa Experiência do Usuário 
+- Poucos Bugs para garantir um bom funcionamento
+- Segurança(Procurar Vulnerabilidades, Criptografar dados, validação back e front)
+
+
+=====
+
+Paradgima 
+
+- Classificação das suas Linguagens 
+- Paradigma Declarativo(SQL) : Funcional(LISP)/Logical(Prolog) e Data-Driven
+- Paradigma Imperativo(POO, Procedural)
+Procedural: COBOL, FORTRAN, ALCOL e C 
+
+Multiparagdima(Linguagens que podemos usar mais de 1 Paragdima) PHP, Python, C++ e JAVA...
+
+POO 
+
+- Eficiencia comprovada de seu proposito 
+- Suporte de Diversas Linguagens
+- Primeira Linguagem foi a Simula 67 em 1967
+- Buscar representar objeto do mundo real(Como um carro)
+
+UML 
+
+- Linguagem de modelagem 
+- Linguagem em diagramas 
+- RAIZ É O POO! PRECISA SABER POO DESENVOLVER UML 
+- Diagramas pode ser comparavel com planta de uma casa 
+- Uso incorreto é projetar todo o projeto com uml 
+- DIAGRAMS 
+  - Estruturais(Estatico) 
+  - Compormentais
