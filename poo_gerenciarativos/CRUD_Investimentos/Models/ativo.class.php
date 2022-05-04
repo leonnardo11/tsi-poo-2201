@@ -23,7 +23,7 @@ class Ativo extends Model{
     $stmt->bindParam(':nome', $dados['nome']);
     $stmt->execute();
 
-    if(stmt->rowCount() > 0){
+    if($stmt->rowCount() > 0){
        echo 'Editado';
        return true;
     }else{
@@ -49,4 +49,4 @@ function listar(int $id = null):?array{
 }
 
 $ativo = new Ativo();
-echo $ativo->inserir(["nome" => "PETR3"]);
+var_dump($ativo->atualizar(4, ['nome' => 'Tesouro Direto']));

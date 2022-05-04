@@ -15,17 +15,27 @@ class Cliente extends Model{
 
           if($stmt->execute()){
                echo $this->lastInsertId();
+
+         }else{
+            return null;
          }        
 
-        return null;
+        
      }
      function atualizar(int $id, array $dados):bool{
          $stmt = $this->prepare("UPDATE clientes SET nome = :nome, telefone = :telefone WHERE id = :id");
          $stmt->bindValue(':nome', $dados['nome']);
          $stmt->bindValue(':telefone', $dados['telefone']);
          $stmt->bindValue(':id', $id);
-         echo 'Editado';
-         return $stmt->execute();
+         $stmt->execute();
+
+         if($stmt->rowCount() > 0){
+            echo 'Editado';
+            return true;
+         }else{
+            echo 'Não Editado';
+            return false;
+         }
      }
 
     
@@ -40,13 +50,12 @@ class Cliente extends Model{
         $lista = [];
         $stmt->execute();
         while($registro = $stmt->fetch(PDO::FETCH_ASSOC)){
-         $lista[] = $registro;
+         $lista = $registro;
         } 
         return $lista;
      }
      
 }
 
-$cliente = new Cliente();
 
-var_dump($cliente->atualizar(1, ['nome' => 'Leonardo', 'telefone' => '9949-9999']));
+

@@ -20,7 +20,6 @@ class Investimento extends Model{
 
      }
 
-
      function atualizar(int $id, array $dados):bool{
         $stmt = $this->prepare("UPDATE {$this->tabela} SET qtd = :qtd, id_ativo = :id_ativo, WHERE id = :id");
         $stmt->bindParam(':id', $id);
@@ -52,7 +51,17 @@ class Investimento extends Model{
          } 
          return $lista;
      }
+
+     function carteiraCliente(int $id_cliente):?array{
+        $stmt = $this->prepare("SELECT id,qtd,id_ativo FROM {$this->tabela} WHERE id_cliente = :id_cliente");
+        $stmt->bindParam(':id_cliente', $id_cliente);
+        $lista = [];
+        $stmt->execute();
+        while($registro = $stmt->fetch(PDO::FETCH_ASSOC)){
+         $lista = $registro;
+        } 
+        return $lista;
+     }
 }
 
 $investimento = new Investimento();
-var_dump($investimento->inserir(['qtd' => '130', 'id_ativo' => '1', 'id_cliente' => '1']));
