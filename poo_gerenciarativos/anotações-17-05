@@ -1,0 +1,30 @@
+Resumo
+
+Principios: Open-Close(OCP)
+OCP: Na programação orientada a objeto, o princípio do aberto/fechado estabelece que "entidades de software devem ser abertas para extensão, mas fechadas para modificação"; isto é, a
+entidade pode permitir que o seu comportamento seja estendido sem modificar seu código-fonte.
+
+Pattern dentro do OCP:
+
+Strategy e o Template 
+
+Quando usar? Para compartilhar em midias e redes sociais;
+
+LSP: Substituição de Barbaba Liskov
+
+- Foi um principio introduzido por Barbava Liskov em 1987
+
+- As Classes filhas nuca devem quebrar as definições de tipo da classe pai/mae
+- Ligado a Herança e usar o polimofirsmo para não quebrar uma classe 
+
+ISP: Interface Segretation
+
+Nenhum código cliente deve ser forçado a depender de metodos que não usa.
+
+
+DISP: Principio da Inversão da Independencia
+
+- Modulo de alto nível: qualquer um depende de outro modulo
+Modulo de aixo nivel: qaluer um não depende de outro modulo 
+
+Modulo de baixo nivel tem que ser mais estável que o modulo de alto nivel
