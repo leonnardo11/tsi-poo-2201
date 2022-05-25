@@ -1,6 +1,6 @@
 <?php 
 
-require __DIR__ . '/Model.class.php';
+require_once __DIR__ . '/Model.class.php';
 
 class Ativo extends Model{
     public function __construct(){

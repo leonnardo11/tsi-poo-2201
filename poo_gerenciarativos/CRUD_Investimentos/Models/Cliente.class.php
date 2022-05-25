@@ -1,11 +1,15 @@
 <?php 
 
-require __DIR__ . '/Model.class.php';
+require_once __DIR__ . '/Model.class.php';
+require_once __DIR__.'/investimento.class.php';
 
 class Cliente extends Model{
+    private Investimento $investimento;
+
     public function __construct(){
         parent::__construct(); // chama o construtor da classe pai
         $this->tabela = 'clientes';
+        $this->investimento = new Investimento();
 
     }
     function inserir(array $dados):?int{
@@ -50,9 +54,13 @@ class Cliente extends Model{
         $lista = [];
         $stmt->execute();
         while($registro = $stmt->fetch(PDO::FETCH_ASSOC)){
-         $lista = $registro;
+         $lista[] = $registro;
         } 
         return $lista;
+     }
+
+     function carteira(int $id_cliente):?array{
+        return $this->investimento($id_cliente);
      }
      
 }

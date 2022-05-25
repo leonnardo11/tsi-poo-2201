@@ -7,8 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <table border='
-    1'>
+    <table border='1'>
         <thead >
             <tr>
                 <th>ID</th>
@@ -31,7 +30,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <td></td>
+                <td><?php echo count($clientes)?>Clientes</td>
                 <td></td>
                 <td></td>
                 <td></td>

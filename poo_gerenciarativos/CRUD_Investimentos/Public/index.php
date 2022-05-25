@@ -6,13 +6,11 @@ require_once '../Models/Investimento.class.php';
 
 class Main{
     private Cliente $cliente;
-    private Investimento $investimento;
 
     public function __construct(){
         
 
         $this->cliente = new Cliente();
-        $this->investimento = new Investimento();
 
         $this->listarClientes();
     }
@@ -20,15 +18,16 @@ class Main{
     public function listarClientes(){
         $clientes = $this->cliente->listar();
         //Pra cada Cliente
+       
         foreach($clientes as $cliente){
-        
-     
-        $carteira = $this->investimento->listarCarteira($cliente['id']); //Pega a carteira do cliente
+    
+        $carteira = $this->cliente->carteira($cliente['id']); //Pega a carteira do cliente
         $totalAtivos = 0; //Inicializa o total de ativos
 
 
         foreach($carteira as $cadaAtivo){
             $totalAtivos += $cadaAtivo['qtd']; //Soma o total de ativos
+            
         }
 
         

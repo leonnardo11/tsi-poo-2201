@@ -1,6 +1,6 @@
 <?php 
 
-require __DIR__ . '/Model.class.php';
+require_once __DIR__ . '/Model.class.php';
 
 class Investimento extends Model{
     public function __construct(){
@@ -17,7 +17,6 @@ class Investimento extends Model{
       }else{
          return false;
       } 
-
      }
 
      function atualizar(int $id, array $dados):bool{
@@ -51,17 +50,18 @@ class Investimento extends Model{
          } 
          return $lista;
      }
-
-     function carteiraCliente(int $id_cliente):?array{
-        $stmt = $this->prepare("SELECT id,qtd,id_ativo FROM {$this->tabela} WHERE id_cliente = :id_cliente");
-        $stmt->bindParam(':id_cliente', $id_cliente);
+     function cliente(int $id_cliente):?array{
+        $stmt = $this->prepare("SELECT id,qtd,id_ativo FROM {$this->tabela} WHERE id_cliente = :id");
+        $stmt->bindParam(':id', $id_cliente);
         $lista = [];
         $stmt->execute();
         while($registro = $stmt->fetch(PDO::FETCH_ASSOC)){
-         $lista = $registro;
+         $lista[] = $registro;
         } 
         return $lista;
+
      }
+     
 }
 
 $investimento = new Investimento();

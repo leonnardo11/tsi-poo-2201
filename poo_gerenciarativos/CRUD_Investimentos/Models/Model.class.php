@@ -1,7 +1,5 @@
 <?php 
 
-
-
 abstract class Model extends PDO {
     protected string $tabela;
     public function __construct(){
