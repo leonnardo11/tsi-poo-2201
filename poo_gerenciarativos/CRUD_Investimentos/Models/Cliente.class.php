@@ -1,6 +1,6 @@
 <?php 
 
-require __DIR__ . '/Model.class.php';
+require_once __DIR__ . '/Model.class.php';
 
 class Cliente extends Model{
     public function __construct(){
@@ -15,20 +15,17 @@ class Cliente extends Model{
 
           if($stmt->execute()){
                echo $this->lastInsertId();
-
-         }else{
-            return null;
          }        
 
-        
+        return null;
      }
      function atualizar(int $id, array $dados):bool{
          $stmt = $this->prepare("UPDATE clientes SET nome = :nome, telefone = :telefone WHERE id = :id");
          $stmt->bindValue(':nome', $dados['nome']);
          $stmt->bindValue(':telefone', $dados['telefone']);
          $stmt->bindValue(':id', $id);
+         echo 'Editado';
          $stmt->execute();
-
          if($stmt->rowCount() > 0){
             echo 'Editado';
             return true;
@@ -38,24 +35,25 @@ class Cliente extends Model{
          }
      }
 
-    
-
      function listar(int $id = null):?array{
         if($id){
-            $stmt = $this->prepare("SELECT id,nome,telefone FROM {$this->tabela} WHERE id = :id");
+            $stmt = $this->prepare("SELECT id,nome,telefone FROM clientes WHERE id = :id");
             $stmt->bindParam(':id', $id);
         }else{
-            $stmt = $this->prepare("SELECT id,nome,telefone FROM {$this->tabela}");
+            $stmt = $this->prepare("SELECT id,nome,telefone FROM clientes");
         }
+
         $lista = [];
+
         $stmt->execute();
         while($registro = $stmt->fetch(PDO::FETCH_ASSOC)){
-         $lista = $registro;
+         $lista[] = $registro;
         } 
         return $lista;
      }
      
 }
 
+$cliente = new Cliente();
 
-
+var_dump($cliente->atualizar(3, ['nome' => 'Raissa', 'telefone' => '000000']));
